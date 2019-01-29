@@ -2,12 +2,9 @@ from PIL import Image, ImageOps
 from tkinter import filedialog, Menu
 import tkinter, webbrowser, piexif
 from PIL import Image, ImageTk
-###TODO LIST
-#Add Contrast Slider
-#Maybe add warning for light mode images mainly consisting of black
 
 #VARIABLES
-version='2.0'
+version='2.1'
 mode='Light'
 darkImage=None
 lightImage=None
@@ -111,7 +108,6 @@ def openWebsite():
 root=tkinter.Tk()
 root.title('Dark Mode Meme Creator (v'+version+')')
 root.geometry(str(windowX)+'x'+str(windowY))
-root.iconbitmap('bin/icon.ico')
 menubar = Menu(root)
 imgCanvas=None
 root.resizable(False, False)
@@ -135,8 +131,6 @@ b = [tkinter.Button(root, command=generateImage, text="Generate Image"),tkinter.
 txt=[tkinter.Label(root, text='Light Mode'),tkinter.Label(root,text='Dark Mode')]
 sliderLight=tkinter.Scale(root, from_=100, to=-100, length=200,highlightthickness=0)
 sliderDark=tkinter.Scale(root, from_=100, to=-100, length=200,highlightthickness=0)
-#NOT USED AS OF NOW == sliderContrastDark=tkinter.Scale(root, from_=100, to=-100, length=200,highlightthickness=0)
-#NOT USED AS OF NOW == sliderContrastLight=tkinter.Scale(root, from_=100, to=-100, length=200,highlightthickness=0)
 imgCanvas=tkinter.Canvas(width=200,height=200,highlightthickness=0)
 
 #GUI PLACING
