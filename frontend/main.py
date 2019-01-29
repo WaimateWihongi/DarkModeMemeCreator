@@ -2,9 +2,6 @@ from PIL import Image, ImageOps
 from tkinter import filedialog, Menu
 import tkinter, webbrowser, piexif
 from PIL import Image, ImageTk
-###TODO LIST
-#Add Contrast Slider
-#Maybe add warning for light mode images mainly consisting of black
 
 #VARIABLES
 version='2.1'
@@ -16,6 +13,7 @@ windowY=400
 convertedDark=None
 convertedLight=None
 convertedFull=None
+
 def convertDark(image,const):
     darkimg=image
     edit=ImageOps.grayscale(darkimg)
