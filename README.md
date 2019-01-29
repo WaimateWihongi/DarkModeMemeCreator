@@ -1,2 +1,3 @@
 # DarkModeMemeCreator
-Make memes that cna only be seen using Reddit's Dark Mode setting.
+Make memes that can only be seen using Reddit's Dark Mode setting.
+<TODO>
